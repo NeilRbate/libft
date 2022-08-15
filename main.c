@@ -215,6 +215,50 @@ int	main()
                 return (1);
         }
 	printf ("\033[32;01m--OK\033[00m\n");
+//STRLCPY
+	printf ("\033[34;01m|| ft_strlcpy test ||\033[00m\n");
+	char	dest1[50];
+	char	dest2[50];
+	if (ft_strlcpy(dest1, "PouicPouic", 20) != strlcpy(dest2, "PouicPouic", 20) || ft_strncmp(dest1, dest2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	if (ft_strlcpy(dest1, "PouicPouic", 5) != strlcpy(dest2, "PouicPouic", 5) || ft_strncmp(dest1, dest2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	if (ft_strlcpy(dest1, "", 20) != strlcpy(dest2, "", 20) || ft_strncmp(dest1, dest2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	printf ("\033[32;01m--OK\033[00m\n");
+//STRLCAT
+	printf ("\033[34;01m|| ft_strlcpy test ||\033[00m\n");
+	char	dst1[50] = "Hello ";
+	char	dst2[50] = "Hello ";
+	if (ft_strlcat(dst1, "Everybody !", 17) != strlcat(dst2, "Everybody !", 17) || ft_strncmp(dst1, dst2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	if (ft_strlcat(dst1, "Everybody !", 10) != strlcat(dst2, "Everybody !", 10) || ft_strncmp(dst1, dst2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	if (ft_strlcat(dst1, "", 17) != strlcat(dst2, "", 17) || ft_strncmp(dst1, dst2, 50) != 0)
+	{
+                printf("\033[31;01mERROR\033[00m\n");
+		return (1);
+	}
+	printf ("\033[32;01m--OK\033[00m\n");
+
+
+
+
 
 	return (0);
 }

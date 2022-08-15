@@ -14,6 +14,8 @@ Finish and fully tested functions but no-normed project:
 -> ft_strchr.c
 -> ft_strrchr.c
 -> ft_strncmp.c
+-> ft_strlcpy.c
+-> ft_strlcat.c
 
 
 Totaly finished :
@@ -33,3 +35,5 @@ Main tested ok for :
 -> strrchr
 -> strncmp
 -> strlen
+-> strlcpy
+-> strlcat
