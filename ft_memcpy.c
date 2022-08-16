@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 15:50:25 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/08/16 16:56:00 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/08/16 17:05:23 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	u_dst = (unsigned char*)dst;
 	u_src = (unsigned char*)src;
 	i = 0;
+	if (!dst && !src)
+		return (0);
 	while (i < n)
 	{
 		u_dst[i] = u_src[i];
