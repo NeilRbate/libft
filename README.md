@@ -17,6 +17,7 @@ Finish and fully tested functions but no-normed project:
 -> ft_strlcpy.c
 -> ft_strlcat.c
 -> ft_memset.c
+-> ft_memcpy.c
 
 
 Totaly finished :
@@ -39,3 +40,4 @@ Main tested ok for :
 -> strlcpy
 -> strlcat
 -> memset
+-> memcpy

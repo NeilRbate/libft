@@ -216,6 +216,7 @@ int	main()
 	printf ("\033[34;01m|| ft_memset test ||\033[00m\n");
 	char	s[] = "Hello Everybody !";
 	char	s1[] = "Hello Everybody !";
+	int	tab[9] = {1,2,3,4,5,6,7,8,9};
 	if (ft_strncmp(ft_memset(s, 48, 1), memset(s1, 48, 1), 18) != 0)
                 printf("\033[31;01mERROR diff test 1\033[00m\n");
 	if (ft_strncmp(ft_memset(s, 48, 5), memset(s1, 48, 5), 18) != 0)
@@ -224,8 +225,25 @@ int	main()
                 printf("\033[31;01mERROR diff test 3\033[00m\n");
 	if (ft_strncmp(ft_memset(s, 48, 16), memset(s1, 48, 16), 18) != 0)
                 printf("\033[31;01mERROR diff test 4\033[00m\n");
+	if (ft_strncmp(ft_memset(tab, 48, 6), memset(tab, 48, 6), 18) != 0)
+                printf("\033[31;01mERROR diff test 5\033[00m\n");
 	printf ("\033[32;01m--OK\033[00m\n");
-	
+//MEMCPY
+	printf ("\033[34;01m|| ft_memcpy test ||\033[00m\n");
+	char	m[50];
+	char	c[50];
+	char	m1[] = "Everybody love nuggets";
+	char	c1[] = "Everybody love nuggets";
+	if (ft_strncmp(ft_memcpy(m, m1, 5),memcpy(c, c1, 5), 5) != 0)
+                printf("\033[31;01mERROR diff test 1\033[00m\n");
+	if (ft_strncmp(ft_memcpy(m, m1, 10),memcpy(c, c1, 10), 10) != 0)
+                printf("\033[31;01mERROR diff test 1\033[00m\n");
+	if (ft_strncmp(ft_memcpy(m, m1, 15),memcpy(c, c1, 15), 16) != 0)
+                printf("\033[31;01mERROR diff test 1\033[00m\n");
+	if (ft_strncmp(ft_memcpy(m, m1, 25),memcpy(c, c1, 25), 25) != 0)
+                printf("\033[31;01mERROR diff test 1\033[00m\n");
+	printf ("\033[32;01m--OK\033[00m\n");
+			
 
 
 
