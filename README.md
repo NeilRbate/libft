@@ -11,10 +11,10 @@ First 42 project
 -> ft_tolower.c  TESTED OK
 -> ft_strchr.c  TESTED OK
 -> ft_strrchr.c TESTED OK
--> ft_strncmp.c TESTED //KO-1 KO-2 KO-12 KO-13
+-> ft_strncmp.c TESTED OK
 -> ft_strlcpy.c  TESTED OK
 -> ft_strlcat.c TESTED OK
 -> ft_memset.c TESTED OK
--> ft_memcpy.c TESTED //KO
+-> ft_memcpy.c TESTED OK
 -> ft_bzero.c TESTED OK
 
