@@ -21,5 +21,6 @@ First 42 project
 -> ft_memchr.c TESTED OK
 -> ft_memcmp.c TESTED OK
 -> ft_strnstr  TESTED OK
--> ft_atoi
+-> ft_atoi TESTED OK
+-> ft_calloc TESTED OK
 
