@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 07:05:03 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 07:05:05 by jbarbate         ###   ########.fr       */
+/*   Created: 2022/11/08 08:36:40 by jbarbate          #+#    #+#             */
+/*   Updated: 2022/11/08 09:32:18 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	stock;
+	int	sign;
 
 	i = 0;
-	j = 0;
-	if (src == 0 || dst == 0)
-		return (0);
-	if (dstsize > 0)
+	stock = 0;
+	sign = 1;
+
+	if (str[i] == '-' || str[i] == '+')
 	{
-		while (src[i])
-		{
-			if (dstsize > 0 && i < (dstsize - 1))
-			{
-				dst[j] = src[j];
-				j++;
-			}
-			i++;
-		}
-		dst[j] = '\0';
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	return (ft_strlen(src));
+	while (str[i] >= '0' && str[i] <= '9' && str[i])
+	{
+		stock *= 10;
+		stock += (str[i] - '0');
+		i++;
+	}
+	return ((stock * sign));
 }

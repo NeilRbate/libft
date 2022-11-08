@@ -20,5 +20,6 @@ First 42 project
 -> ft_memmove.c TESTED OK
 -> ft_memchr.c TESTED OK
 -> ft_memcmp.c TESTED OK
--> ft_strnstr A FINIR
+-> ft_strnstr  TESTED OK
+-> ft_atoi
 
