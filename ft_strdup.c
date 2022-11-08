@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:31:38 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 12:39:39 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/08 17:17:39 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		i;
 	char	*ret;
 
-	i = 0;
 	ret = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!ret)
 		return (0);
