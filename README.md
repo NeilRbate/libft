@@ -23,4 +23,8 @@ First 42 project
 -> ft_strnstr  TESTED OK
 -> ft_atoi TESTED OK
 -> ft_calloc TESTED OK
+-> ft_putchar_fd TESTED OK
+-> ft_putstr_fd TESTED OK
+-> ft_putendl_fd TESTED OK
+-> ft_putnbr_fd TESTED OK
 
