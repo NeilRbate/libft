@@ -27,5 +27,6 @@ First 42 project
 -> ft_putstr_fd TESTED OK
 -> ft_putendl_fd TESTED OK
 -> ft_putnbr_fd TESTED OK
--> ft_substr MKO sur le 2 ??
+-> ft_substr TESTED OK
+-> ft_strjoin TESTED OK
 
