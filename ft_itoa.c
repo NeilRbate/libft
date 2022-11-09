@@ -1,38 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 07:05:26 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/09 13:22:55 by jbarbate         ###   ########.fr       */
+/*   Created: 2022/11/09 12:46:25 by jbarbate          #+#    #+#             */
+/*   Updated: 2022/11/09 14:03:21 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+static int	len_nb(long n)
 {
-	size_t	i;
-	size_t	j;
+	int d;
 
-	i = 0;
-	j = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	if (len == 0)
-		return (0);
-	while (haystack[i] && i < len)
+	d = 2;
+	if (n < 0)
+		n = -n;
+	while (n > 10)
 	{
-		while (haystack[i + j] == needle[j] && (i + j) < len)
-		{
-			j++;
-			if (j == ft_strlen(needle))
-				return ((char *)haystack + i);
-		}
-		j = 0;
-		i++;
+		d++;
+		n = n % 10;
 	}
-	return (0);
+	return (n);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*ret;
+	long	stock;
+	int		len;
+	int		i;
+
+	stock = n;
+	i = 0;
+	len = len_nb(stock);
+	if (stock < 0)
+	{
+		stock = -stock;
+		len++;
+	}
+	ret = malloc(sizeof(char) * len);
+	if(n < 0)
+		ret[0] = '-';
+	ret[i] = '\0';
+	return (ret);
 }

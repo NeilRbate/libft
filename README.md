@@ -29,4 +29,6 @@ First 42 project
 -> ft_putnbr_fd TESTED OK
 -> ft_substr TESTED OK
 -> ft_strjoin TESTED OK
+-> ft_strtrim TESTED OK
+-> ft_itoa 
 
