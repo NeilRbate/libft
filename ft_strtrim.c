@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:48:45 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/09 12:43:46 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:43:40 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (s1 == 0 || set == 0)
-		return (0);
 	char				*ret;
 	unsigned int		start;
 	unsigned int		end;
 
+	if (s1 == 0 || set == 0)
+		return (0);
 	start = 0;
 	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[start]) && s1[start])
