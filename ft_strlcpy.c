@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 07:05:03 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 18:12:26 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/09 07:00:00 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	if (src == 0 || dst == 0)
-		return (0);
 	if (dstsize > 0)
 	{
 		while (src[i])

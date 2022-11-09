@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:30:14 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 18:16:23 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/09 07:24:58 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = 0;
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
 
@@ -38,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	if (start >= ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
-	ret = malloc(sizeof(*s) * len);
+	ret = malloc(sizeof(*s) * (len + 1));
 	if (ret == 0)
 		return (0);
 	ret = ft_strncpy(ret, s + start, len);
