@@ -6,12 +6,12 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:13:43 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/10 09:11:23 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:56:46 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		len_t;
