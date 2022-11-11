@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:37:45 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/10 17:41:44 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:37:54 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+	if (new != 0)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

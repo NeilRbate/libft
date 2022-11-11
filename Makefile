@@ -6,7 +6,7 @@
 #    By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:03:24 by jbarbate          #+#    #+#              #
-#    Updated: 2022/11/11 17:36:15 by jbarbate         ###   ########.fr        #
+#    Updated: 2022/11/11 19:28:17 by jbarbate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,5 +48,3 @@ bonus: ${B_OBJS}
 	@make MBONUS=1 all
 
 re: fclean all
-
-.PHONY: all clean fclean re bonus

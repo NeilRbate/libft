@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:57:07 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 17:14:08 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:40:17 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*list;
 
 	if (lst == 0 || *lst == 0)
-		list = new;
+		*lst = new;
 	else
 	{
 		list = *lst;
-		while (list)
+		while (list->next != 0)
 			list = list->next;
 		list->next = new;
 	}

@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:44:23 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/10 15:54:44 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:31:23 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	list = malloc(sizeof(list));
+	list = malloc(sizeof(t_list));
 	if (list == 0)
 		return (0);
 	list->content = content;
