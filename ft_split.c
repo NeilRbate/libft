@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:58:11 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 09:10:16 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:39:49 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	tab_len(char const *s, char c)
 	j = 1;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != '\0' && s[i + 1] != c)
+		if (s[i] == c && s[i + 1] && s[i + 1] != c)
 			j++;
 		i++;
 	}
@@ -44,9 +44,9 @@ static char	*ft_strcut(const char *s, char c)
 	while (is_charset(s[i], c) == 0 && s[i])
 		i++;
 	ret = malloc(sizeof(char) * i + 1);
-	if (!ret)
+	if (ret == 0)
 		return (0);
-	ft_strlcpy((char *)ret, s, i + 1);
+	ft_strlcpy(ret, s, i + 1);
 	return (ret);
 }
 
@@ -54,7 +54,7 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
-	char	**ret;
+	char		**ret;
 
 	i = 0;
 	j = 0;
