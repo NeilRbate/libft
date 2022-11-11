@@ -6,20 +6,20 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:53:44 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 16:55:02 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:21:17 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_listsize(t_list *list)
+int	ft_lstsize(t_list *list)
 {
 	int	i;
 
 	i = 0;
 	while (list)
 	{
-		lst = list->next;
+		list = list->next;
 		i++;
 	}
 	return (i);

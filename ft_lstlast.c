@@ -6,9 +6,11 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:55:27 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 16:56:29 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:19:12 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
