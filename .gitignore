@@ -2,3 +2,4 @@ libftTester/
 .DS_Store
 *.o
 libft.a
+libft-war-machine/
