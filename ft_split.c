@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:58:11 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/12 08:43:43 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/12 09:38:25 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,17 @@ static int	tab_len(char const *s, char c)
 	int	j;
 
 	i = 0;
-	j = 1;
+	j = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] && s[i + 1] != c)
+		if (is_charset(s[i], c) == 0)
+		{
 			j++;
-		i++;
+			while (is_charset(s[i], c) == 0 && s[i])
+				i++;
+		}
+		else
+			i++;
 	}
 	return (j);
 }
@@ -67,8 +72,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (is_charset(s[i], c) == 0)
 		{
-			ret[j] = ft_strcut((s + i), c);
-			j++;
+			ret[j++] = ft_strcut((s + i), c);
 			while (is_charset(s[i], c) == 0 && s[i])
 				i++;
 		}
