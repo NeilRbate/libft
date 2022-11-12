@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:13:43 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 16:35:40 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/12 08:44:04 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len_t;
 	int		i;
 	int		j;
-	char		*ret;
+	char	*ret;
 
 	i = 0;
 	j = 0;

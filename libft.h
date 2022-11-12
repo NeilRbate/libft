@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 07:05:59 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/11 17:17:40 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/12 08:44:36 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-int	ft_atoi(const char *str);
-int	ft_lstsize(t_list *lst);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_lstsize(t_list *lst);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -61,6 +61,5 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
-
 
 #endif
