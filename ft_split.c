@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:58:11 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/13 08:30:46 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 09:31:06 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,24 +55,24 @@ static char	*ft_strcut(const char *s, char c)
 	return (ret);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**split(char **ret, char *s, char c)
 {
-	int		i;
-	int		j;
-	char	**ret;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	if (s == 0)
-		return (0);
-	ret = malloc(sizeof(char *) * (tab_len(s, c) + 1));
-	if (ret == 0)
-		return (0);
 	while (s[i])
 	{
 		if (is_charset(s[i], c) == 0)
 		{
-			ret[j++] = ft_strcut((s + i), c);
+			ret[j++] = ft_strcut(s + i, c);
+			if (ret == 0)
+			{
+				while (ret)
+					free(ret++);
+				return (ret);
+			}
 			while (is_charset(s[i], c) == 0 && s[i])
 				i++;
 		}
@@ -80,5 +80,23 @@ char	**ft_split(char const *s, char c)
 			i++;
 	}
 	ret[j] = 0;
+	return (ret);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ret;
+
+	if (s == 0)
+		return (0);
+	ret = malloc(sizeof(char *) * (tab_len(s, c) + 1));
+	if (ret == 0)
+		return (0);
+	ret = split(ret, (char *)s, c);
+	if (ret == 0)
+	{
+		free(ret);
+		return (0);
+	}
 	return (ret);
 }
