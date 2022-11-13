@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 12:16:57 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/12 14:42:10 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:30:30 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		while (lst)
 		{
-			list_1 =  ft_lstnew((*f)(lst->content));
+			list_1 = ft_lstnew((*f)(lst->content));
 			if (list_1 == 0)
 			{
 				ft_lstclear(&list_2, (*del));
 				return (0);
 			}
 			ft_lstadd_back(&list_2, list_1);
-		       	lst = lst->next;
+			lst = lst->next;
 		}
 	}
 	else

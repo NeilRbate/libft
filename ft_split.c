@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:58:11 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/12 14:44:21 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:30:46 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
-	char		**ret;
+	char	**ret;
 
 	i = 0;
 	j = 0;

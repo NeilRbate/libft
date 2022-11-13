@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 10:30:36 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/12 12:02:05 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:29:48 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (lst != 0 && del != 0)
 	{
-		while(*lst)
+		while (*lst)
 		{
 			list = (*lst)->next;
 			ft_lstdelone((*lst), del);
