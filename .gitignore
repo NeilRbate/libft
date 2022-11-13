@@ -3,3 +3,4 @@ libftTester/
 *.o
 libft.a
 libft-war-machine/
+*.sh
