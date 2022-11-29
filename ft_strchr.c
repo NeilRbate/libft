@@ -6,11 +6,9 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 07:04:45 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 07:04:47 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 09:40:18 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

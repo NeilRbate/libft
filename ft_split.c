@@ -6,7 +6,7 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:58:11 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/13 09:31:06 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 10:56:58 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,13 @@ static char	**split(char **ret, char *s, char c)
 	{
 		if (is_charset(s[i], c) == 0)
 		{
-			ret[j++] = ft_strcut(s + i, c);
-			if (ret == 0)
+			ret[j] = ft_strcut(s + i, c);
+			if (ret[j++] == 0)
 			{
-				while (ret)
-					free(ret++);
-				return (ret);
+				while (j - 1 >= 0)
+					free(ret[--j]);
+				free(ret);
+				return (0);
 			}
 			while (is_charset(s[i], c) == 0 && s[i])
 				i++;
@@ -93,10 +94,5 @@ char	**ft_split(char const *s, char c)
 	if (ret == 0)
 		return (0);
 	ret = split(ret, (char *)s, c);
-	if (ret == 0)
-	{
-		free(ret);
-		return (0);
-	}
 	return (ret);
 }

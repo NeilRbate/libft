@@ -6,11 +6,9 @@
 /*   By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:36:40 by jbarbate          #+#    #+#             */
-/*   Updated: 2022/11/08 11:49:12 by jbarbate         ###   ########.fr       */
+/*   Updated: 2022/11/13 09:32:00 by jbarbate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isspace(const char *str)
 {
