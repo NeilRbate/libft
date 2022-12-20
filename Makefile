@@ -6,7 +6,7 @@
 #    By: jbarbate <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 07:03:24 by jbarbate          #+#    #+#              #
-#    Updated: 2022/12/19 19:07:25 by jbarbate         ###   ########.fr        #
+#    Updated: 2022/12/20 08:32:04 by jbarbate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,17 +26,17 @@ NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 
 .c.o:
-	${GCC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
+	@${GCC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
+	@ar rcs ${NAME} ${OBJS}
 
 all: ${OBJS} ${NAME}
 
 clean:
-	rm -f ${OBJS}
+	@rm -f ${OBJS}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
