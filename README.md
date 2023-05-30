@@ -1,4 +1,4 @@
 # libft
-First 42 project
+libft 42 project
 
-Fully tested, moulinette OK
+It's my own C Lib, reproduce a lot and function on stdlib and add an others else.
